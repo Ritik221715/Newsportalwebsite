@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+ {% block favicon %}
+    <link rel="icon" href="{% static 'images/a.jpeg' %}" >
+  {% endblock %}
+
+ {% block title %}
+     about.com
+      {% endblock %}
+{% block child %}
+   <div class="container mt-5">
+       <div class="row my-5">
+           <div class="col-sm-6">
+               <img src="{% static 'images/n4.jpg' %}" height="450px" width="500px">
+           </div>
+           <div class="col-sm-6 px-3">
+                <p class="h1 fs-3">About <b class="text-color2">Us <i class="fa-solid fa-info-circle ic "></i></b></p>
+               <b>This project belongs to GlobalIndia24*7</b>
+               <p>
+                   About Samachar India:
+Samachar India redefines the essence of news delivery by focusing on the core principle of authenticity. Unlike traditional newspapers, which may be bogged down by the concept of "paper," Samachar India places emphasis on "news"—delivering accurate, timely, and comprehensive information about global events and local happenings.
+
+At Samachar India, our mission is to provide real news, devoid of rumors and misinformation. We are committed to highlighting significant issues that shape our world, working diligently to keep our readers informed with integrity and reliability. Our goal is not just to capture attention, but to engage and inform through well-crafted, humorous, and descriptive content.
+We believe that more information is always better than less, and strive to present it in a way that is both
+engaging and enlightening. Whether through detailed articles, witty commentary, or insightful analysis, Samachar India aims to be your trusted source for news.
+               </p>
+               <a class="btn bg-mycolor2 text-light" href="#">Know more...</a>
+           </div>
+       </div>
+         <div class="row my-5">
+           <div class="col-sm-6 px-3">
+                <p class="h1 fs-3">our <b class="text-color2">Vision <i class="fa-solid fa-info-circle ic "></i></b></p>
+               <b>This project belongs to GlobalIndia24*7</b>
+               <p>
+
+                   Our vision for the news portal is to be a trusted source of timely, accurate, and
+                   relevant information that empowers our readers. We aim to deliver diverse perspectives on current events,
+                   fostering informed discussions and deeper understanding within our communities. By embracing innovative technologies
+                   and engaging multimedia content, we strive to create an accessible platform that not only informs but also inspires. Together, we
+                   envision a space where curiosity thrives and knowledge drives positive change.
+               </p>
+               <a class="btn bg-mycolor2 text-light" href="#">Know more...</a>
+           </div>
+              <div class="col-sm-6">
+               <img src="{% static 'images/n5.jpg' %}" height="450px" width="500px">
+           </div>
+       </div>
+    </div>
+{% endblock %}

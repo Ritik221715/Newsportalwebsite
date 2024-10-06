@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+ {% block favicon %}
+    <link rel="icon" href="{% static 'images/v.jpeg' %}" >
+  {% endblock %}
+
+ {% block title %}
+     profile.com
+      {% endblock %}
+
+{% block child %}
+ <!--start heading-->
+       <div class="row heading">
+           <div class="col-sm-6 mx-auto text-center py-3">
+               <p class="h1 fs-3">My <b class="text-color2">Portfolio <i class="fa-regular fa-user"></i></b></p>
+               <i>Creating a personal portfolio is a fantastic way to showcase your skills, achievements, and personality.
+                   Here are some key steps and tips to help you get started:</i>
+           </div><hr>
+       </div>
+ <!--end heading-->
+<div class="row">
+  <div class="col-sm-10 mx-auto">
+            <div class="row">
+              <div class="col-sm-6 my-2 py-5">
+                  <h3 style="padding-top:50px;box-sizing:border-box;">
+                      Hello I am <b class="txt-color1" style="font-size:40px;color:var(--color2)"><br>
+                      Ritik Chaurasia </b>
+                  </h3>
+                  <p style="font-weight:bold;font-size:20px;">
+                      I am from Government Polytechnic Atraulia Azamgarh. I am a Computer
+                      Science Engineering. I am a Full Stack Developer in<b class="text-color2"> Python with Django.</b>
+                  </p>
+                  <a class="btn bg-mycolor2 text-light" style="text-decoration:none;" target="_blank" href="http://ritik221715.pythonanywhere.com/" >My Cv <i class="fa-solid fa-download"></i></a><br><br>
+                  <b style="color:var(--color2);font-size:20px;">Follow Me:</b><br><br>
+                   <a class="btn btn-outline-primary btn-floating ms-0" href="https://www.facebook.com/ritik.chaurasia.1675/" role="button"
+                             ><i class="fab fa-facebook-f ic"></i></a>
+                           <a class="btn btn-outline-danger btn-floating ms-2" href="https://www.instagram.com/ritikchaurasia166/" role="button"
+                           ><i class="fab fa-instagram ic"></i></a>
+                           <a class="btn btn-outline-primary btn-floating ms-2" href="https://www.linkedin.com/in/ritik-chaurasia-94213a2a1/" role="button"
+                            ><i class="fab fa-linkedin-in ic"></i></a>
+                           <a class="btn btn-outline-success btn-floating ms-2" href="https://web.whatsapp.com/" role="button"
+        ><i class="fab fa-whatsapp ic"></i></a>
+                           <a class="btn btn-outline-secondary btn-floating ms-2" href="https://github.com/Ritik221715" role="button"><i class="fab fa-github ic"></i></a>
+              </div>
+              <div class="col-sm-6 my-3 p-5">
+                <img src="{% static 'images/ritik1.jpg' %}" style="max-height:400px;padding-left:20px;">
+              </div>
+            </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+ {% block favicon %}
+    <link rel="icon" href="{% static 'images/n.jpeg' %}" >
+  {% endblock %}
+
+ {% block title %}
+     sliderdetails.com
+      {% endblock %}
+
+{% block child %}
+
+  <!--start heading-->
+       <div class="row heading">
+           <div class="col-sm-6 mx-auto text-center py-3">
+               <p class="h1 fs-3">Slider <b class="text-color2">Details <i class="fa-solid fa-circle-info"></i><i class="fa-solid fa-news ic "></i></b></p>
+               <i>Latest India News | Read latest and breaking news from India. Today's top India news headlines, news on Indian politics, elections, government, business, technology, i.e. </i>
+           </div><hr>
+       </div>
+ <!--end heading-->
+  <div class="row">
+    <div class="col-sm-7 mx-auto shadow-lg mb-4 p-5">
+      <div class="row">
+        {% for i in sldata %}
+        <div class="col-sm-12">
+
+          <h3>{{i.slider_title}}</h3>
+          <img src="../{{i.slider_picture}}" class="img-thumbnail w-100 my-3"/>
+          <p>
+            {{i.slider_description}}
+          </p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

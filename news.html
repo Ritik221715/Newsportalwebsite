@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block icon %}
+    <link rel="icon" href="{% static 'images/n.jpeg' %}">
+    {% endblock %}
+
+  {% block title %}
+        News.com
+        {% endblock %}
+
+ {% block child %}
+<style>
+    .form-control{
+       height:50px;
+       border-radius:0px !important;
+    }
+    .input-group-text input
+    {
+      background:transparent;
+      color:white;
+      height:50px;
+      border:none;
+      font-weight:bold;
+    }
+</style>
+<!--start heading-->
+       <div class="row heading">
+           <div class="col-sm-6 mx-auto text-center py-2">
+               <p class="h1 fs-3 m-0">Our <b class="text-color2">News <i class="fa-solid fa-newspaper "></i></b></p>
+               <i>Latest India News | Read latest and breaking news from India. Today's top India news headlines, news
+                   on Indian politics, elections, government, business, technology, i.e. </i>
+           </div><hr>
+       </div>
+ <!--end heading-->
+<!-- start searching section-->
+     <div class="row">
+         <div class="col-sm-6 mx-auto">
+             <form>
+             <div class="input-group shadow-lg mb-3">
+                 <input type="text" name="search" class="form-control" placeholder="search..">
+                 <i class="input-group-text bg-mycolor2 p-0 rounded-0">
+                     <input type="submit" value="search news">
+                 </i>
+             </div>
+             </form>
+         </div>
+     </div>
+ <!-- end searching section-->
+
+  <div class="row">
+      <div class="col-sm-10 mx-auto">
+          {% for i in citydata %}
+          <a href="/news?cityid={{i.id}}" class="btn bg-mycolor2 text-light my-2">{{i.city_name}}</a>
+          {% endfor %}
+      </div>
+  </div>
+<div class="row">
+    <div class="col-sm-10 mx-auto">
+        <div class="row">
+            <div class="col-sm-3 my-3">
+              <ul class="list-group">
+  <li class="list-group-item bg-mycolor2 text-light">Categories</li>
+                   {% for i in categorydata %}
+  <a href="/news?catid={{i.id}}" style="text-decoration:none"> <li class="list-group-item">{{i.category_name}}</li> </a>
+                  {% endfor %}
+                   <a href="/news/" style="text-decoration:none"> <li class="list-group-item">All News</li> </a>
+
+
+</ul>
+            </div>
+            <div class="col-sm-9">
+                {% for i in ndata %}
+               <div class="card border-0 shadow p-2 mb-2 bg-body-tertiary rounded">
+  <div class="row">
+    <div class="col-md-4">
+      <img src="../{{i.news_picture}}" class="img-fluid rounded-start" style="max-height:300px;" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <b class="card-title">{{i.headline}}</b><br><br><br>
+        <p class="card-text">
+             <b>{{i.news_category}} || {{i.news_city}}</b><br>
+            <small class="text-body-secondary">Posted Date : {{i.posted_date}}</small>
+         <a href="/newsdetails?nid={{i.id}}" class="badge bg-mycolor2 text-light rounded-pill" style="text-decoration:none;">
+                <i class="fa-solid fa-eye"></i> View More</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+                   {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

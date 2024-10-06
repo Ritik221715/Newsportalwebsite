@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block icon %}
+    <link rel="icon" href="{% static 'images/j.jpeg' %}">
+    {% endblock %}
+
+  {% block title %}
+        jobs.com
+        {% endblock %}
+
+ {% block child %}
+<!--start heading-->
+       <div class="row heading">
+           <div class="col-sm-6 mx-auto text-center py-3">
+               <p class="fs-2" style="font-weight:bold;">Latest <b class="text-color2">Job News <i class="fa-solid fa-bag-shopping"></i></b></p>
+               <i>A job description or JD is a written narrative that describes the general tasks, or other related duties, and
+                   responsibilities of a position. It may specify the functionary to whom the position rep…</i>
+           </div><hr>
+       </div>
+ <!--end heading-->
+<div class="row">
+    <div class="col-sm-10 mx-auto">
+        <div class="row">
+            {% for i in jdata %}
+            <div class="col-sm-6 text-center">
+                <div class="card py-2 shadow-lg mb-3 border-0">
+                    <a href="{{i.title_link}}" target="_blank">{{i.title}}</a>
+                    <div style="font-size:15px;"><b> <i class="fa-regular fa-calendar-days text-color2"></i> posted-date:{{i.posted_date}}</b></div>
+                </div>
+            </div>
+            {% endfor %}
+            <div class="col-sm-6"></div>
+        </div>
+    </div>
+</div>
+{% endblock %}

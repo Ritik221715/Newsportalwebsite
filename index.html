@@ -1,0 +1,162 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block icon %}
+    <link rel="icon" href="{% static 'images/h.jpeg' %}">
+    {% endblock %}
+
+  {% block title %}
+        Home.com
+        {% endblock %}
+
+ {% block child %}
+             <div class="container-fluid slider-outer p-0">
+       <div class="row slider">
+           <div class="col-sm-4">
+               <!-- start card--->
+               <div class="fs-3 shadow p-1 mb-2 bg-body-tertiary rounded">Our Latest <b class="text-color2"> News</b></div>
+               <marquee direction="up" behavior="alternate" loop="100" onmouseover="stop()" onmouseleave="start()"  style="max-height:400px;">
+                   {% for i in lndata %}
+               <div class="card border-0 shadow p-1 mb-2 bg-body-tertiary rounded">
+  <div class="row">
+    <div class="col-md-4">
+      <img src="../{{i.news_picture}}" class="img-fluid rounded-start"  style="min-height:100px;" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h6 class="card-title" style="min-height:60px;overflow-y:auto;">{{i.headline}}</h6>
+        <p class="card-text"><small class="text-body-secondary">Posted Date : {{i.posted_date}}</small>
+         <a href="/newsdetails?nid={{i.id}}" class="badge bg-mycolor2 text-light rounded-pill" style="text-decoration:none;">
+                <i class="fa-solid fa-eye"></i> View More</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+                   {% endfor %}
+                   </marquee>
+
+               <!-- end card--->
+
+           </div>
+               <!-- end card--->
+           <div class="col-sm-8 p-0">
+               <!--start slider-->
+
+               <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+  </div>
+  <div class="carousel-inner">
+      {% for i in sdata %}
+    <div class="carousel-item active" data-bs-interval="2000">
+      <img src="../{{i.slider_picture}}" class="d-block w-100" alt="..." style="max-height:470px;">
+      <div class="carousel-caption d-none d-md-block">
+          <h6 style="font-weight:bold;"><a href="/sliderdetails?sid={{i.id}}" class="text-color2" style="text-decoration:none;"> {{i.slider_title}}l</a> </h6>
+      </div>
+    </div>
+      {% endfor %}
+
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+               <!--end slider-->
+           </div>
+       </div>
+    </div>
+    <div class="row category mt-5">
+        <!--start category-->
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+            <div class="fs-2 text-dark" style="font-weight:bold;">News By <b class="text-color2">Category</b></div>
+            <i>Newspapers are an important part of our life. Some people cannot start their day
+                without reading newspapers. They are printed in various languages and even in local
+                languages. Newspapers are delivered to our doorsteps every morning . Newspapers are one
+                of the easiest methods of spreading news and information around the world. There might be
+                those who read every single news article, irrespective of what they speak about. There are
+                also people who read only what interests them. For some, it might be politics; for some, it might be sports; while for others, it might be technology. Though the number of people subscribing to printed newspapers is reducing day by day, there are still some who prefer reading them rather
+                than the digital versions of the news on their personal phones or laptops.</i>
+        <div class="row mt-3">
+            {% for x in cdata %}
+            <div class="col-sm-2">
+                <!--start card -->
+                <div class="card shadow border-0 p-3 mb-2 bg-body-tertiary rounded text-center" style="width:100%;">
+                    <a href="/categorydetails?catid={{x.id}}"> <img src="../{{x.category_picture}}" class="card-img-top img-fluid" alt="..." style="max-height:100px;"></a>
+                    <a href="/categorydetails?catid={{x.id}}" style="text-decoration:none;color:black;"> <b class="card-text">{{x.category_name}}</b></a>
+                </div>  <!--end card-->
+            </div>
+            {% endfor %}
+        </div>
+        </div>
+        <div class="col-sm-1"></div>
+        <!-- end category-->
+    </div>
+      <div class="row mt-5" id="trending">
+          <div class="col-sm-1"></div>
+          <div class="col-sm-10">
+              <div class="fs-2 text-dark" style="font-weight:bold;">Our Trending<b class="text-color2"> News</b></div>
+              <i>Get the latest environment and ocean news from an award-winning conservation
+                  organisation. Read the latest climate change news and stories - straight from
+                  the frontline. Types: Ocean conservation film, Winner of 4 Awards, The Madame
+                  Kokoly story Discover Innovative World News Stories & The Latest Happenings At
+                  Salzburg Global Seminar. We Cover The Best In Worldwide Discussions Across The Globe. Learn More & Subscribe Today!
+                  Transform Systems. Inspire Action. Expand Collaboration. Bridge Divides.</i>
+              <div class="row mt-3">
+                  {% for i in tdata %}
+                  <div class="col-sm-3">
+              <div class="card border-0 shadow p-3 mb-2 bg-body-tertiary rounded " style="width:100%;">
+                <img src="../{{i.news_picture}}" class="card-img-top img-fluid" alt="..." style="max-height:120px;">
+              <div class="card-body p-0">
+                <h4 class="card-title" style="font-size:15px;min-height:100px;overflow-y:auto;">{{i.headline}}</h4>
+                <p class="card-text">
+                   {{i.news_city}}<br>
+                    <b>Posted Date : </b>{{i.posted_date}}
+                </p>
+                <a href="/newsdetails?nid={{i.id}}" class="btn bg-mycolor2 text-light rounded-pill"><i class="fa-solid fa-eye"></i> View More</a>
+              </div>
+              </div>
+                  </div>
+                 {% endfor %}
+              </div>
+          </div>
+          <div class="col-sm-1"></div>
+      </div>
+
+      <div class="row mt-5" id="state">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+            <div class="fs-2 text-dark" style="font-weight:bold;">City wise <b class="text-color2"> News</b></div>
+            <i>A city is a relatively permanent and highly organized centre of population,
+                of greater size or importance than a town or village1. It is a place where
+                many people live closely together, and offers more jobs, more schools,
+                and more kinds of activities than smaller towns and villages2. A city can
+                be defined as a permanent and densely settled place with administratively
+                defined boundaries whose members work primarily on non-agricultural tasks3. </i>
+        <div class="row mt-3">
+            {% for i in citydata %}
+            <div class="col-sm-2">
+                <!--start card -->
+                <div class="card shadow border-0 p-3 mb-2 bg-body-tertiary rounded text-center" style="width:100%;">
+                    <a href="/news?cityid={{i.id}}"><img src="../{{i.city_picture}}" class="card-img-top img-fluid" alt="..." style="max-height:100px;"></a>
+                    <a href="/news?cityid={{i.id}}" style="text-decoration:none;color:black;">  <b class="card-text">{{i.city_name}}</b></a>
+                </div>  <!--end card-->
+            </div>
+            {% endfor %}
+
+        </div>
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+      <div class="row section3"></div>
+      <div class="row section4"></div>
+{% endblock %}

@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block icon %}
+    <link rel="icon" href="{% static 'images/c.jpeg' %}">
+    {% endblock %}
+
+  {% block title %}
+        contact.com
+        {% endblock %}
+
+ {% block child %}
+<!--start header-->
+<div class="row header">
+    <div class="col-sm-6 mx-auto text-center py-3">
+        <p class="fs-2" style="font-weight:bold;">Contact <b class="text-color2"> Us <i class="fa-solid fa-phone ic "></i></b></p>
+        <i>You may contact us by contact number or fill this form any time you need professional support or have any question.</i>
+    </div><hr>
+</div>
+<!--start header-->
+<div class="row mt-3">
+    <div class="col-sm-10 mx-auto">
+        <div class="row">
+            <div class="col-sm-7">
+        <form autocomplete="off" method="post">
+            {% csrf_token %}
+             <b>Name:</b><br>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text shadow-lg  mb-2 bg-body-tertiary rounded-0 border-0 " ><i class="fa-solid fa-user"></i></span>
+                      <input type="text" class="form-control shadow-lg  mb-2 bg-body-tertiary rounded-0 border-0" name="name" required placeholder="Enter your name" aria-label="Username" aria-describedby="basic-addon1">
+                   </div>
+                    <b>Email:</b><br>
+                     <div class="input-group mb-3">
+                        <span class="input-group-text shadow-sm  mb-2 bg-body-tertiary rounded-0 border-0"><i class="fa-solid fa-envelope ic"></i></span>
+                      <input type="email" class="form-control shadow-lg  mb-2 bg-body-tertiary rounded-0 border-0" name="email" required placeholder="Enter your email" aria-label="Username" aria-describedby="basic-addon1">
+                   </div>
+                    <b>Mobile:</b><br>
+                     <div class="input-group mb-3">
+                        <span class="input-group-text shadow-lg  mb-2 bg-body-tertiary rounded-0 border-0"> <i class="fa-solid fa-phone ic "></i></span>
+                      <input type="number" class="form-control shadow-lg  mb-2 bg-body-tertiary rounded-0 border-0" name="mobile" required placeholder="Enter your mob no" aria-label="Username" aria-describedby="basic-addon1">
+                   </div>
+                    <b>Message:</b><br>
+                   <div  class="input-group mb-3">
+                     <span class="input-group-text shadow-lg  mb-4 bg-body-tertiary rounded-0 border-0 " ><i class="fa-solid fa-message"></i></span>
+                        <textarea class="form-control shadow-lg  mb-4 bg-body-tertiary rounded-0 border-0" placeholder="enter message" name="msg" style="height:80px;resize:none;"></textarea>
+                   </div>
+                    <input type="submit" value="save" class="form-control shadow-lg  mb-4 bg-mycolor2 rounded-0 border-0  text-light  w-25">
+        </form>
+           </div>
+            <div class="col-sm-5 px-5">
+                 <div class="row shadow-lg boundary-0 rounded-0 py-3">
+                       <div class="col-sm-10 mx-auto">
+                       <p class="h4">Contact <b class="text-color2">Us <i class="fa-solid fa-phone ic "></i></b></p>
+                       <i style="font-size:12px;">You may contact us by contact number or fill this form any time you need professional support or have any question.</i><hr>
+
+                              <i class="fa-solid fa-location-dot"></i>
+                                Plot No-43, Behind H.P Petrol Pump,
+                               Tedhi Pulia Ring Rd, Sector 5,
+                              Vikas Nagar, Lucknow
+                              Uttar Pradesh 226022  <hr>
+                               <i class="fa-solid fa-phone ic "></i>  &ensp;+91-905427432 ,
+                                 +91-837473827<hr>
+                                <i class="fa-solid fa-envelope ic"></i> &ensp;ritikchaurasia842@gmail.com<hr>
+                            <a class="btn btn-outline-primary btn-floating ms-0" href="https://www.facebook.com/ritik.chaurasia.1675/" role="button"
+                             ><i class="fab fa-facebook-f ic"></i></a>
+                           <a class="btn btn-outline-danger btn-floating ms-2" href="https://www.instagram.com/ritikchaurasia166/" role="button"
+                           ><i class="fab fa-instagram ic"></i></a>
+                           <a class="btn btn-outline-primary btn-floating ms-2" href="https://www.linkedin.com/in/ritik-chaurasia-94213a2a1/" role="button"
+                            ><i class="fab fa-linkedin-in ic"></i></a>
+                           <a class="btn btn-outline-success btn-floating ms-2" href="https://web.whatsapp.com/" role="button"
+        ><i class="fab fa-whatsapp ic"></i></a>
+                           <a class="btn btn-outline-secondary btn-floating ms-2" href="https://github.com/Ritik221715" role="button"><i class="fab fa-github ic"></i></a>
+                      </div>
+                      </div>
+            </div>
+        </div>
+    </div>
+</div>
+ <div class="row heading">
+           <div class="col-sm-6 mx-auto text-center py-3">
+               <p class="h1 fs-3">Find <b class="text-color2">Us Google Map <i class="fa-solid fa-location-dot"></i></b></p>
+               <i>Google Maps is a great navigation tool, but it doesn’t show property lines clearly. This short guide will help you find any property’s boundaries using Google Maps and other helpful tools. Let me show you </i>
+           </div>
+       </div>
+<div class="row mb-5">
+    <div class="col-sm-10 mx-auto">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.161301648797!2d80.96384467421208!3d26.898375476655737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39995785d5f7f1a5%3A0xffa47f1efe103f0d!2sTechpile%20Technology%20Pvt.%20Ltd.%20%7C%7C%20Internet%20website%20developers!5e0!3m2!1sen!2sin!4v1726602541112!5m2!1sen!2sin"  style="min-height:450px;border:0;"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-100"></iframe>
+    </div>
+</div>
+{% endblock %}

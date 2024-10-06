@@ -1,0 +1,526 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+        DailySpark24X7.com
+        {% endblock %}
+    </title>
+    {% block icon %}
+    <link rel="icon" href="{% static 'images/i1.jpeg' %}">
+    {% endblock %}
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+    <style>
+        body
+        {
+          overflow-x:hidden;
+        }
+        :root
+        {
+          --color2:#FFA000;
+          --color1:#607D8B;
+          --color3:#FFFF00;
+        }
+        .bg-mycolor1
+        {
+          background:var(--color1);
+        }
+        .bg-mycolor2
+        {
+           background:var(--color2);
+        }
+         .bg-mycolor3
+        {
+           background:var(--color3);
+        }
+         .text-color1
+        {
+           color:var(--color1);
+        }
+        .text-color2
+        {
+           color:var(--color2);
+        }
+        .text-color3
+        {
+           color:var(--color3);
+        }
+         .ic
+         {
+            height:20px;
+            width:20px;
+            text-align:center;
+            line-height:20px;
+            border-radius:5px;
+            transition:all .5s;
+         }
+         .ic:hover{
+            color:var(--color3);
+            transform:rotate(360deg);
+            transition:all .5s;
+         }
+        .r1
+        {
+          font-size:14px;
+        }
+        .r1 a
+        {
+          text-decoration:none;
+          color:white;
+          transition:all .5s;
+        }
+        .r1 a:hover
+        {
+            color:#ffb806;
+            transform:scale(1.1,1.1);
+            transition:all .5s;
+        }
+        #menu
+        {
+           background:transparent !important;
+        }
+        #menu ul li a
+        {
+         color:white;
+         font-weight:bold;
+         width:127px;
+         margin-left:45px;
+         text-align:center;
+         transition:all .5s;
+        }
+         #menu ul li a:hover
+        {
+          color:var(--color3);
+          transform:scale(1.1,1.1);
+          transition:all .5s;
+        }
+        .ufooter ul li a
+        {
+          text-decoration:none;
+          font-size:15px;
+        }
+        .sa
+        {
+          text-decoration:none;
+          color:var(--color1);
+           transition:all .5s;
+        }
+        .sa:hover
+        {
+          color:var(--color2);
+          transition:all .5s;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid ">
+     <div class="row r1 bg-mycolor1 text-light text-center py-1">
+        <div class="col-sm-3  py-1">
+            <a href="/faqs/"><i class="fa-solid fa-question ic"></i> FAQs</a> |
+            <a href="/about/"><i class="fa fa-info-circle ic" aria-hidden="true"></i> About Us</a> |
+            <a href="/contact/"><i class="fa-regular fa-id-badge ic"></i> Contact Us</a>
+        </div>
+        <div class="col-sm-3 py-1">
+            <a href="tel:=917905427432">  <b style="color:#43e334; border-radius:5px;">    <i class="fa-solid fa-phone ic "></i> </b> &ensp;+91-905427432 ,</a>
+        <a href="tel:=917905427432"> +91-837473827</a>
+        </div>
+        <div class="col-sm-3 py-1">
+             <a href="https://myaccount.google.com/?hl=en&authuser=1&utm_source=OGB&utm_medium=act"> <b style="color:#b48b55; border-radius:5px;"> <i class="fa-solid fa-envelope ic"></i></b>&ensp; ritikchaurasia842@gmail.com</a>
+        </div>
+        <div class="col-sm-3 pe-2">
+           <section>
+       <!-- Facebook -->
+      <a class="btn btn-outline-light btn-floating ms-0" href="https://www.facebook.com/ritik.chaurasia.1675/" role="button"
+                             ><i class="fab fa-facebook-f ic"></i></a>
+
+      <!-- Twitter -->
+ <a class="btn btn-outline-light btn-floating ms-2" href="https://github.com/Ritik221715" role="button"><i class="fab fa-github ic"></i></a>
+      <!-- whatsapp -->
+       <a class="btn btn-outline-light btn-floating ms-2" href="https://web.whatsapp.com/" role="button"
+        ><i class="fab fa-whatsapp ic"></i></a>
+
+      <!-- Instagram -->
+       <a class="btn btn-outline-light btn-floating ms-2" href="https://www.instagram.com/ritikchaurasia166/" role="button"
+                           ><i class="fab fa-instagram ic"></i></a>
+
+      <!-- Linkedin -->
+      <a class="btn btn-outline-light btn-floating ms-2" href="https://www.linkedin.com/in/ritik-chaurasia-94213a2a1/" role="button"
+                            ><i class="fab fa-linkedin-in ic"></i></a>
+    <!-- Section: Social media -->
+           </section>
+        </div>
+    </div>
+    <div class="row text-color1 py-2 text-center">
+        <div class="col-sm-3 fs-3">
+            <img src="{% static 'images/i1.jpeg' %}" style="height:25px;width:25px;">
+            Daily<b class="text-color2">Spark24*7 <i class="fa-solid fa-newspaper"></i></b>
+        </div>
+        <div class="col-sm-3 py-1 fs-5 ps-5">
+            <b><a href="#trending" class="sa">Trending News</a></b>
+        </div>
+        <div class="col-sm-3 py-1 fs-5 ps-5">
+            <b><a href="#state" class="sa">City News</a></b>
+        </div>
+
+        <div class="col-sm-3 py-1 pe-5">
+            <a href="/contact/" class="btn btn-sm bg-mycolor2 text-light badge p-2 rounded-0" style="margin-left:100px;"><i class="fa-regular fa-address-book"></i> Contact</a>
+        </div>
+    </div>
+    <div class="row bg-mycolor2 sticky-top" style="min-height:40px;">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+            <!--start menu-->
+             <nav class="navbar navbar-expand-lg bg-body-tertiary p-0" id="menu">
+               <div class="container-fluid">
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+               </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/home/">
+              <i class="fa-solid fa-house"></i> Home</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/about/">
+              <i class="fa fa-info-circle" aria-hidden="true"></i> About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/news/"><i class="fa-solid fa-newspaper "></i> News</a>
+        </li>
+           <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/videos/">
+              <i class="fa-solid fa-play"></i> Videos</a>
+        </li>
+           <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/jobs/">
+              <i class="fa-solid fa-bag-shopping"></i> Jobs</a>
+        </li>
+           <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/contact/">
+              <i class="fa-regular fa-id-badge"></i> Contact Us</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/admin/">
+              <i class="fa-solid fa-user-tie"></i> Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+            <!--end menu-->
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+    <div class="row">
+        <div class="col-12" style="min-height:500px;">
+            {% block child %}
+
+            {% endblock %}
+        </div>
+    </div>
+
+       <div class="row ufooter">
+           <div class="container-fluid mt-5 p-0">
+
+  <!-- Footer -->
+<footer class="bg-dark text-center text-white">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a class="btn btn-outline-light btn-floating ms-5" href="#" role="button"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a class="btn btn-outline-light btn-floating ms-2" href="#" role="button"
+        ><i class="fab fa-twitter"></i
+      ></a>
+
+      <!-- Google -->
+      <a class="btn btn-outline-light btn-floating ms-2" href="#" role="button"
+        ><i class="fab fa-google"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a class="btn btn-outline-light btn-floating ms-2" href="#" role="button"
+        ><i class="fab fa-instagram"></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a class="btn btn-outline-light btn-floating ms-2" href="#" role="button"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+
+      <!-- Github -->
+      <a class="btn btn-outline-light btn-floating ms-2" href="#" role="button"
+        ><i class="fab fa-github"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+      <hr>
+    <!-- Section: Text -->
+    <section class="mb-4">
+      <p>
+         News is information about current events. This may be provided through many different media: word of mouth, printing,
+          News is information about current events. This may be provided through many different media: word of mouth, printing,
+      </p>
+    </section>
+    <!-- Section: Text -->
+
+    <!-- Section: Links -->
+    <section class="">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase text-start">Latest news</h5>
+
+          <ul class="list-unstyled mb-0 text-start">
+            <li>
+              <a href="#" class="text-white">Technology News</a>
+            </li>
+            <li>
+              <a href="#" class="text-white">Auto News</a>
+            </li>
+            <li>
+              <a href="#" class="text-white">Car Review</a>
+            </li>
+            <li>
+              <a href="#" class="text-white">Mobile Apps</a>
+            </li>
+               <li>
+              <a href="#" class="text-white">Gadgets</a>
+            </li>
+               <li>
+              <a href="#" class="text-white">Sarkari Result</a>
+            </li>
+              <li>
+              <a href="#" class="text-white">Sarkari Naukri</a>
+            </li>
+              <li>
+              <a href="#" class="text-white">Education News</a>
+            </li>
+              <li>
+              <a href="#" class="text-white">Business News</a>
+            </li>
+              <li>
+              <a href="#" class="text-white">World News</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase text-start">News From Indian States</h5>
+
+          <ul class="list-unstyled mb-0 text-start">
+            <li>
+              <a href="#" class="text-white">Uttar pradesh News</a>
+            </li>
+            <li>
+              <a href="#" class="text-white">Uttarakhand News</a>
+            </li>
+            <li>
+              <a href="#" class="text-white">Himachal pradesh News</a>
+            </li>
+            <li>
+              <a href="#" class="text-white">Haryana News</a>
+            </li>
+              <li>
+              <a href="#" class="text-white">Bihar News</a>
+            </li>
+              <li>
+              <a href="#" class="text-white">Rajasthan News</a>
+            </li>
+              <li>
+              <a href="#" class="text-white">Jammu & Kasmir  News</a>
+            </li>
+              <li>
+              <a href="#" class="text-white">Jharkhand News</a>
+            </li>
+              <li>
+              <a href="#" class="text-white">chhattisgarh News</a>
+            </li>
+              <li>
+              <a href="#" class="text-white">Delhi News</a>
+            </li>
+              <li>
+              <a href="#" class="text-white">Gujarat News</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase text-start">Entertainment News</h5>
+
+          <ul class="list-unstyled mb-0 text-start">
+            <li>
+              <a href="#" class="text-white">Bollywood News</a>
+            </li>
+            <li>
+              <a href="#" class="text-white">Tv Serials</a>
+            </li>
+            <li>
+              <a href="#" class="text-white">Hollywood News</a>
+            </li>
+            <li>
+              <a href="#" class="text-white">Movies Reviews</a>
+            </li>
+               <li>
+              <a href="#" class="text-white">Photo Gallery</a>
+            </li>
+               <li>
+              <a href="#" class="text-white">Videos</a>
+            </li>
+               <li>
+              <a href="#" class="text-white">shayari</a>
+            </li>
+               <li>
+              <a href="#" class="text-white">Hindi Jokes</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase text-start">Lifestyle</h5>
+
+          <ul class="list-unstyled mb-0 text-start">
+            <li>
+              <a href="#" class="text-white">Health News</a>
+            </li>
+            <li>
+              <a href="#" class="text-white">Fitness News</a>
+            </li>
+            <li>
+              <a href="#" class="text-white">Fashion News</a>
+            </li>
+            <li>
+              <a href="#" class="text-white">Spirituality </a>
+            </li>
+               <li>
+              <a href="#" class="text-white">Astrology</a>
+            </li>
+               <li>
+              <a href="#" class="text-white">Daily Horoscope</a>
+            </li>
+               <li>
+              <a href="#" class="text-white">Astrology Prediction</a>
+            </li>
+               <li>
+              <a href="#" class="text-white">Astrologers</a>
+            </li>
+               <li>
+              <a href="#" class="text-white">Astrology services</a>
+            </li>
+               <li>
+              <a href="#" class="text-white">Pujas News</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase text-start">Trending</h5>
+
+          <ul class="list-unstyled mb-0 text-start">
+            <li>
+              <a href="#" class="text-white">UP Board Result</a>
+            </li>
+            <li>
+              <a href="#" class="text-white">HP Board Result</a>
+            </li>
+            <li>
+              <a href="#" class="text-white">UK Board Result</a>
+            </li>
+            <li>
+              <a href="#" class="text-white">Bteup Result</a>
+            </li>
+               <li>
+              <a href="#" class="text-white">Utility News</a>
+            </li>
+               <li>
+              <a href="#" class="text-white">Bizarre News</a>
+            </li>
+               <li>
+              <a href="#" class="text-white">Kavya</a>
+            </li>
+               <li>
+              <a href="#" class="text-white">Special Stories</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+           <!--Grid column-->
+          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase text-start">Sports News</h5>
+
+          <ul class="list-unstyled mb-0 text-start">
+            <li>
+              <a href="#" class="text-white">Cricket News</a>
+            </li>
+            <li>
+              <a href="#" class="text-white">Live Cricket Score</a>
+            </li>
+            <li>
+              <a href="#" class="text-white">Hockey</a>
+            </li>
+            <li>
+              <a href="#" class="text-white">Tennis</a>
+            </li>
+               <li>
+              <a href="#" class="text-white">Football</a>
+            </li>
+               <li>
+              <a href="#" class="text-white">Kabaddi</a>
+            </li>
+          </ul> <br>
+              <h5 class="text-uppercase text-start ps-4">Tools</h5>
+              <ul style="list-style-type:none;text-align:left;">
+                  <li>
+                      <a href="#" class="text-white">Age Calculator</a>
+                  </li>
+                  <li>
+                      <a href="#" class="text-white">BMI Calculator</a>
+                  </li>
+                  <li>
+                      <a href="#" class="text-white">Income Tax Calculator</a>
+                  </li>
+              </ul>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </section>
+    <!-- Section: Links -->
+  </div>
+  <!-- Grid container -->
+
+</footer>
+<!-- Footer -->
+
+</div>
+<!-- End of .container -->
+       </div>
+       <div class="row bfooter">
+          <!-- Copyright -->
+  <div class="text-center p-3" style="background-color:#607D8B;color:white;">
+      <b> Developed By : <a href="/myprofile/ " style="text-decoration:none;color:white;"> Er. Ritik Chaurasia </a></b> ©
+      <a class="text-light" href="https://www.techpile.in/" target="_blank" style="text-decoration:none;"> <b>Techpile</b> <b class="text-color2">Technology PVt. Lmt.<i class="fa-solid fa-newspaper"></i></b></a>
+  </div>
+  <!-- Copyright -->
+       </div>
+</div>
+<script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+<script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+</body>
+</html>
